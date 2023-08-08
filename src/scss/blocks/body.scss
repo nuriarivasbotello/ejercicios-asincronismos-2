@@ -1,5 +1,9 @@
 html {
 }
 body {
-  background-image: url('/assets/images/cat.jpeg');
+  max-width: 1440px;
+  margin:30px auto;
+  color:white;
+  font-family: var(--font);
+  background-color: #0E1323;
 }

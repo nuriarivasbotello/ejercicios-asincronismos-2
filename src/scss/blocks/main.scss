@@ -1,1 +1,17 @@
 /* ESTILOS DEL MAIN */
+@use '../mixins/responsive.scss' as *;
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+    @include responsive(desktop) {
+        width: 1500px;
+        height: 490px;
+        display: grid;
+        grid-template-columns: 255px 255px 255px 255px;
+         grid-template-rows: 50% 50%;
+      }
+}

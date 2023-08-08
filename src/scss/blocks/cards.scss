@@ -1,0 +1,108 @@
+@use '../mixins/responsive.scss' as *;
+.card{
+    width:327px ;
+    height: 160px;
+    border-radius: 1rem;
+    background-color: var(--color-primary);
+    &__information{
+        height: 120px;
+        position: relative;
+        top:25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:start;
+        padding-left:30px;
+        padding-bottom:15px;
+        border-radius: 1rem;
+        background-color: var(--color-primary);
+        @include responsive(desktop) {
+            width:240px ;  
+            height: 200px;
+            
+        }
+        &__title{
+            font-size: 18px;
+        }
+        &__dates{
+            height: 30px;
+            padding-top:30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:70px;
+            @include responsive(desktop) {
+                height: 80px;
+                flex-direction: column;
+                gap: 0px;
+                align-items:start;
+            }
+        }
+        &__hours{
+            
+        font-size: 35px;
+        font-weight: lighter;
+        @include responsive(desktop) {
+            font-size: 45px;
+        }
+        }
+        &__previous{
+            font-size: 12px;
+            font-weight: lighter;
+            @include responsive(desktop) {
+                position: relative;
+                bottom:30px;
+            }
+        }
+    }
+    @include responsive(desktop) {
+        width:240px ;  
+        
+    }
+}
+.icon{
+    position: relative;
+    top:12px;
+    left: 250px;
+    transform: rotate(45deg);
+    align-items: center;
+    @include responsive(desktop) {
+        left:180px;
+    }
+}
+.card--orange{
+    background-color: var(--color-one-card);
+}
+.card--blue{
+    background-color: var(--color-two-card);
+}
+.card--red{
+    background-color: var(--color-three-card);
+}
+.card--green{
+    background-color: var(--color-four-card);
+    &__move{
+        @include responsive(desktop) {
+            position: relative;
+            //bottom:108px;
+         grid-column: 2/3;
+        }
+    }
+}
+.card--purple{
+    background-color: var(--color-five-card);
+    &__move{
+        @include responsive(desktop) {
+            grid-column: 3/4;
+        }
+    }
+}
+.card--yellow{
+    background-color: var(--color-six-card);
+    &__move{
+        @include responsive(desktop) {
+            grid-column: 4/5;
+        }
+    }
+}
